@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/domain" },
+    { "path": "packages/contracts" },
+    { "path": "packages/config" },
+    { "path": "packages/observability" },
+    { "path": "packages/test-utils" },
+    { "path": "packages/empire-adapter" },
+    { "path": "packages/steam-adapter" },
+    { "path": "packages/persistence" },
+    { "path": "apps/api" },
+    { "path": "apps/worker" },
+    { "path": "apps/simulator" }
+  ]
+}

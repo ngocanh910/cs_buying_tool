@@ -1,0 +1,17 @@
+{
+  "name": "@csgoempire-bot/observability",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "pino": "^9.6.0"
+  }
+}

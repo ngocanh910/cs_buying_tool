@@ -1,0 +1,15 @@
+{
+  "name": "@csgoempire-bot/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsx src/dev.ts"
+  },
+  "dependencies": {
+    "@csgoempire-bot/config": "workspace:*",
+    "@csgoempire-bot/domain": "workspace:*",
+    "@csgoempire-bot/observability": "workspace:*"
+  }
+}

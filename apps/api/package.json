@@ -1,0 +1,14 @@
+{
+  "name": "@csgoempire-bot/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@csgoempire-bot/config": "workspace:*",
+    "fastify": "^5.2.1"
+  }
+}
