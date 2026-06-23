@@ -48,6 +48,15 @@ importers:
       '@csgoempire-bot/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@csgoempire-bot/contracts':
+        specifier: workspace:*
+        version: link:../../packages/contracts
+      '@csgoempire-bot/domain':
+        specifier: workspace:*
+        version: link:../../packages/domain
+      '@csgoempire-bot/persistence':
+        specifier: workspace:*
+        version: link:../../packages/persistence
       fastify:
         specifier: ^5.2.1
         version: 5.8.5
@@ -67,12 +76,18 @@ importers:
       '@csgoempire-bot/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@csgoempire-bot/contracts':
+        specifier: workspace:*
+        version: link:../../packages/contracts
       '@csgoempire-bot/domain':
         specifier: workspace:*
         version: link:../../packages/domain
       '@csgoempire-bot/observability':
         specifier: workspace:*
         version: link:../../packages/observability
+      '@csgoempire-bot/persistence':
+        specifier: workspace:*
+        version: link:../../packages/persistence
 
   packages/config:
     dependencies:

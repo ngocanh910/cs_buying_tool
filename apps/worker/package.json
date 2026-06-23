@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@csgoempire-bot/config": "workspace:*",
+    "@csgoempire-bot/contracts": "workspace:*",
     "@csgoempire-bot/domain": "workspace:*",
-    "@csgoempire-bot/observability": "workspace:*"
+    "@csgoempire-bot/observability": "workspace:*",
+    "@csgoempire-bot/persistence": "workspace:*"
   }
 }

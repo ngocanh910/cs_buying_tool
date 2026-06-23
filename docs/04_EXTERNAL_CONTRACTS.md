@@ -27,7 +27,24 @@ Every network contract starts as `UNVERIFIED`. It can become `VERIFIED` only whe
 - Keep candidate paths in research notes, not executable constants.
 - Fixtures must be redacted and must not contain API keys, cookies, passwords or 2FA secrets.
 - Contract changes require versioned fixtures and regression tests.
+- Milestone 11 intake candidates must use `docs/contracts/CONTRACT_INTAKE_TEMPLATE.md`.
+- Redacted fixture paths must follow `docs/contracts/fixtures/<contract-id>/v<number>/redacted-<name>.json`.
+- Read-only intake acceptance does not enable transaction methods.
 
 ## Milestone 1 implementation note
 
 All executable adapter code created in Milestone 1 is fake, in-memory, or deterministic simulator code. Each gateway exposes `UNVERIFIED_EXTERNAL_CONTRACT` status and contains no guessed endpoint URL, payload shape, header set, WebSocket channel, authentication flow, or Steam confirmation behavior.
+
+## Milestone 3 implementation note
+
+Milestone 3 adds runtime schemas only for internal raw snapshots and a dry-run decision engine that persists proposed commands. It does not add live or read-only Empire/Steam adapters because every external endpoint, event, payload, header, WebSocket channel, and authentication flow in this registry remains `UNVERIFIED_EXTERNAL_CONTRACT`.
+
+## Milestone 5 implementation note
+
+Milestone 5 adds a code-level verification harness for future external contracts. The harness requires official documentation or authorized redacted capture evidence, redacted fixtures without secrets, runtime schema names, contract test names, and documented auth/rate-limit/timeout/idempotency/error behavior before any contract can evaluate to `VERIFIED`.
+
+No real Empire or Steam contract has been verified in this repository yet. No endpoint, payload, header, WebSocket channel, authentication flow, or live/read-only adapter was added.
+
+## Milestone 11 implementation note
+
+Milestone 11 adds a contract intake template, fixture directory policy, and pure `evaluateContractIntake` gate for future read-only evidence. It does not add any real fixture, executable endpoint, payload, header, WebSocket channel, authentication flow, or adapter behavior. All contracts in this registry remain `UNVERIFIED`.

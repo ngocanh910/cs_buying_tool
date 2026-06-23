@@ -10,6 +10,16 @@ export const envSchema = z.object({
     .transform((value) => value === "true"),
   DATABASE_URL: z.string().url().optional(),
   REDIS_URL: z.string().url().optional(),
+  CONTROL_PLANE_TOKEN: z
+    .string()
+    .min(1)
+    .optional()
+    .or(z.literal("").transform(() => undefined)),
+  LOCAL_ENCRYPTION_KEY: z
+    .string()
+    .refine((value) => Buffer.byteLength(value, "utf8") === 32, "LOCAL_ENCRYPTION_KEY must be a 32-byte string")
+    .optional()
+    .or(z.literal("").transform(() => undefined)),
   LOG_LEVEL: z.enum(["trace", "debug", "info", "warn", "error", "fatal"]).default("info")
 });
 

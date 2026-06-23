@@ -10,6 +10,8 @@ import type {
   TradeOfferSnapshot
 } from "@csgoempire-bot/domain";
 
+export * from "./external-contracts.js";
+
 export type ContractStatus = "UNVERIFIED_EXTERNAL_CONTRACT" | "VERIFIED";
 
 export type CommandRecord = {
@@ -79,10 +81,23 @@ export type PurchaseRepository = {
 };
 
 export type CommandRepository = {
+  readonly persistProposed: (record: CommandRecord) => Promise<void>;
   readonly persist: (record: CommandRecord) => Promise<void>;
   readonly find: (commandId: string) => Promise<StoredCommand | undefined>;
+  readonly listRecent: (limit: number) => Promise<readonly StoredCommand[]>;
   readonly markUnknown: (commandId: string, reason: string) => Promise<void>;
   readonly findReconciliationRequired: (accountId: AccountId) => Promise<readonly StoredCommand[]>;
+};
+
+export type ControlPlaneState = {
+  readonly globalKillSwitch: boolean;
+  readonly pausedAccounts: ReadonlySet<AccountId>;
+};
+
+export type ControlPlaneStore = {
+  readonly getState: () => Promise<ControlPlaneState>;
+  readonly setGlobalKillSwitch: (enabled: boolean) => Promise<void>;
+  readonly setAccountPaused: (accountId: AccountId, paused: boolean) => Promise<void>;
 };
 
 export type LeaseResult =
@@ -105,3 +120,9 @@ export type Clock = {
 export type IdGenerator = {
   readonly nextId: (prefix: string) => string;
 };
+
+export function assertVerifiedExternalContract(status: ContractStatus, contractName: string): void {
+  if (status !== "VERIFIED") {
+    throw new Error(`${contractName} is ${status}`);
+  }
+}

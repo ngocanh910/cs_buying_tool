@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "@csgoempire-bot/config": "workspace:*",
+    "@csgoempire-bot/contracts": "workspace:*",
+    "@csgoempire-bot/domain": "workspace:*",
+    "@csgoempire-bot/persistence": "workspace:*",
     "fastify": "^5.2.1"
   }
 }

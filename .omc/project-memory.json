@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1782220719439,
+  "projectRoot": "C:\\Users\\PC\\Desktop\\csgoempire_bot",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "fastify",
+        "version": "5.2.1",
+        "category": "backend"
+      },
+      {
+        "name": "vitest",
+        "version": "2.1.8",
+        "category": "testing"
+      }
+    ],
+    "packageManager": "pnpm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "pnpm build",
+    "testCommand": "pnpm test",
+    "lintCommand": "pnpm lint",
+    "devCommand": "pnpm dev",
+    "scripts": {
+      "lint": "eslint .",
+      "format": "prettier --write .",
+      "typecheck": "tsc -b",
+      "test": "vitest run",
+      "build": "tsc -b",
+      "dev": "tsx apps/worker/src/dev.ts",
+      "simulator": "tsx apps/simulator/src/index.ts"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": true,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "apps": {
+      "path": "apps",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1782220719401,
+      "keyFiles": []
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 13,
+      "lastAccessed": 1782220719402,
+      "keyFiles": [
+        "02_CODEX_MASTER_PROMPT.md",
+        "03_PRODUCT_AND_TECH_SPEC.md",
+        "04_EXTERNAL_CONTRACTS.md",
+        "05_DOMAIN_AND_STATE_MACHINES.md",
+        "06_SECURITY_AND_SAFETY.md"
+      ]
+    },
+    "packages": {
+      "path": "packages",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1782220719409,
+      "keyFiles": []
+    },
+    "apps\\api": {
+      "path": "apps\\api",
+      "purpose": "API routes",
+      "fileCount": 3,
+      "lastAccessed": 1782220719410,
+      "keyFiles": [
+        "package.json",
+        "tsconfig.json",
+        "tsconfig.tsbuildinfo"
+      ]
+    },
+    "packages\\config": {
+      "path": "packages\\config",
+      "purpose": "Configuration files",
+      "fileCount": 3,
+      "lastAccessed": 1782220719411,
+      "keyFiles": [
+        "package.json",
+        "tsconfig.json",
+        "tsconfig.tsbuildinfo"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}

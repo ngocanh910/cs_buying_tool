@@ -19,9 +19,14 @@
 
 ## Release checklist
 
+- Production preflight gate returns `ready`.
+- Release evidence report status is `ready`.
 - All contracts used by release are VERIFIED.
 - Dry-run replay results reviewed.
 - Value caps configured.
+- Load test covers at least 20 simulated accounts.
+- Chaos tests cover worker crash, persistence outage, coordination outage, WSS churn, and restart recovery.
 - Backup/restore tested.
 - Alerts and dashboards operational.
+- Secret scan passed.
 - ToS/legal approval documented.
